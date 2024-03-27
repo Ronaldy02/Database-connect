@@ -48,7 +48,8 @@
         </div>
       </nav>
       <div class="container">
-        <div class="display-4 text-center">Ecoles</div>
+        <div class="display-4 text-center">Liste des Etudiants</div>
+ 
         <table class="table">
             <thead>
               <tr>
@@ -61,17 +62,14 @@
               </tr>
             </thead>
             <tbody>
-            {% for liste in Etudiants %}
+            {% for liste in ecoles %}
               <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td>{{ liste.id }}</td>
+                <th scope="row">{{ liste.id }}</th>
                 <td>{{ liste.nom }}</td>
                 <td>{{ liste.prenom }}</td>
-                <td>{{ liste.Pays }}</td>
+                <td>{{ liste.pays }}</td>
                 <td>{{ liste.adresse }}</td>
                 <td>{{ liste.telephone }}</td>
-                <td>@mdo</td>
               </tr>
             {% endfor %}
             </tbody>
